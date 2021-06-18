@@ -1,0 +1,36 @@
+body {
+    padding: 24px;
+}
+.container-1 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.flex-box-container-1, .flex-box-rps{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    padding: 16px;
+    flex-wrap: wrap;
+}
+
+#cats img {
+    max-width: 30%;
+    min-width: 100px;
+    margin: 12px;
+    box-shadow: 0px 5px 20px black;
+}
+.generateCat {
+    margin-bottom: 16px;
+}
+
+.flex-box-rps{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flex-box-rps img:hover {
+    box-shadow: 0px 10px 50px rgba(37, 50, 233, 0.8);
+}
