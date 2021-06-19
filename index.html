@@ -21,19 +21,58 @@
       <div class="flex-box-container-1" id="age-in-days"></div>
 
       <h2>Challenge 2: Cat Generator</h2>
-      <button class="btn btn-success generateCat" onclick="generateCat()">Generate Cat</button>
+      <button class="btn btn-success generateCat" onclick="generateCat()">
+        Generate Cat
+      </button>
       <div class="flex-box-container-1" id="cats"></div>
 
       <h2>Challenge 3: Rock, Paper, Scissors</h2>
       <div class="flex-box-rps" id="flex-box-rps-div">
-          <img id="rock" src="https://lh3.googleusercontent.com/proxy/r9OcCYqaek36SCPofb7EEZkz6Gra_WMSPf9LuQ1pFm_3INcC3-8e4gxjIvZe6jjIVgJ5OTVr_PouITjlpVlDb65fs3h97ITWektu7A" alt="" width="150" height="150" onclick="rpsGame(this)">
-          <img id="paper" src="https://images.all-free-download.com/images/graphiclarge/blank_white_paper_cartoon_clip_art_12090.jpg" alt="" width="150" height="150" onclick="rpsGame(this)">
-          <img id="scissors" src="https://www.vippng.com/png/detail/78-784535_cartoon-transprent-png-scissors-cartoon-png.png" alt="" width="150" height="150" onclick="rpsGame(this)">
+        <img
+          id="rock"
+          src="https://lh3.googleusercontent.com/proxy/r9OcCYqaek36SCPofb7EEZkz6Gra_WMSPf9LuQ1pFm_3INcC3-8e4gxjIvZe6jjIVgJ5OTVr_PouITjlpVlDb65fs3h97ITWektu7A"
+          alt=""
+          width="150"
+          height="150"
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="paper"
+          src="https://images.all-free-download.com/images/graphiclarge/blank_white_paper_cartoon_clip_art_12090.jpg"
+          alt=""
+          width="150"
+          height="150"
+          onclick="rpsGame(this)"
+        />
+        <img
+          id="scissors"
+          src="https://www.vippng.com/png/detail/78-784535_cartoon-transprent-png-scissors-cartoon-png.png"
+          alt=""
+          width="150"
+          height="150"
+          onclick="rpsGame(this)"
+        />
       </div>
 
-       
-  
-          
+      <h2>Challenge 4: Change the Colors of All Buttons</h2>
+      <div class="flex-box-pick-color">
+        <form action="">
+          <select
+            name="backdrop"
+            id="background"
+            onchange="buttonChangeColor(this)"
+          >
+            <option value="random">Random</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="reset">Reset</option>
+          </select>
+        </form>
+        <button class="btn btn-secondary">Wee!</button>
+        <button class="btn btn-danger">Yahoo!</button>
+        <button class="btn btn-success">Google!</button>
+        <button class="btn btn-primary">Facebook!</button>
+      </div>
     </div>
 
     <script src="js/scripts.js"></script>
