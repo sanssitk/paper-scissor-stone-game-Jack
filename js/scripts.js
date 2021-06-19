@@ -122,3 +122,15 @@ buttonColorReset = () => {
     all_buttons[i].classList.add(copyAllButtons[i]);
   }
 };
+
+randomColors = () => {
+  let choices = ["btn-primary", "btn-danger", "btn-success", "btn-warning"];
+
+  for (allbutton of all_buttons) {
+    let randomNumber = Math.floor(Math.random() * 4);
+    allbutton.classList.remove(allbutton.classList[1]);
+    allbutton.classList.add(choices[randomNumber]);
+  }
+};
+
+// Challenge: 5 BlackJack
