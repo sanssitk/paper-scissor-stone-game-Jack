@@ -189,19 +189,24 @@ blackjackHit = () => {
   }
 };
 
-blackjackStand = () => {
-  blackjackGame.isStand = true;
-  let card = randomCard();
-  showCard(card, DEALER);
-  updateScore(card, DEALER);
-  showScore(DEALER);
-
-  if (DEALER.score > 15) {
-    blackjackGame.turnsOver = true;
-    let winner = computeWinner();
-    showResult(winner);
-  }
+// Async function for dealer automation
+sleep = (ms) => {
+  return new Promise((res) => setTimeout(res, ms));
 };
+
+async function blackjackStand() {
+  blackjackGame.isStand = true;
+  while (DEALER.score < 16 && blackjackGame.isStand === true) {
+    let card = randomCard();
+    showCard(card, DEALER);
+    updateScore(card, DEALER);
+    showScore(DEALER);
+    await sleep(500);
+  }
+  blackjackGame.turnsOver = true;
+  let winner = computeWinner();
+  showResult(winner);
+}
 
 showScore = (activePlayer) => {
   if (activePlayer.score > 21) {
